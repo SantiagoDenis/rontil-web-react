@@ -9,11 +9,12 @@ import PublicRoutes from "./PublicRoutes"
 const AppRouter = () => {
 
     const {user} = useLoginContext()
+    console.log("user router", user)
 
     return (
         <BrowserRouter>
             {
-            user.logged
+            user
                 ? <PrivateRoutes/>
                 : <PublicRoutes/>
             }
